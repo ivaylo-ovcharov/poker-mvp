@@ -1,0 +1,134 @@
+/* Typography */
+.h1 {
+    @apply text-6xl font-extrabold;
+}
+
+.h2 {
+    @apply text-4xl font-extrabold;
+}
+
+.h3 {
+    @apply text-3xl font-extrabold;
+}
+
+.h4 {
+    @apply text-2xl font-extrabold;
+}
+
+@screen md {
+    .h1 {
+        @apply text-7xl;
+    }
+
+    .h2 {
+        @apply text-5xl;
+    }
+}
+
+/* Buttons */
+.btn,
+.btn-sm {
+    @apply font-medium inline-flex items-center justify-center rounded-full leading-normal transition duration-150 ease-in-out;
+}
+
+.btn {
+    @apply px-6 py-3 font-semibold;
+}
+
+.btn-sm {
+    @apply px-4 py-2;
+}
+
+/* Forms */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+    @apply bg-white border border-gray-200 focus:border-blue-500;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox {
+    @apply rounded;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select {
+    @apply text-sm px-3 py-2;
+}
+
+.form-input,
+.form-textarea {
+    @apply placeholder-gray-400;
+}
+
+.form-select {
+    @apply pr-10;
+}
+
+.form-checkbox,
+.form-radio {
+    @apply text-blue-500 rounded-sm;
+}
+
+/* Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Switch element */
+.form-switch {
+    @apply relative select-none !important;
+    width: 44px !important;
+}
+
+.form-switch label {
+    @apply block overflow-hidden cursor-pointer h-6 rounded-full !important;
+}
+
+.form-switch label > span:first-child {
+    @apply absolute block rounded-full !important;
+    width: 20px !important;
+    height: 20px !important;
+    top: 2px !important;
+    left: 2px !important;
+    right: 50% !important;
+    transition: all .15s ease-out !important;
+}
+
+.form-switch input[type="checkbox"]:checked + label {
+    @apply bg-indigo-500 !important;
+}
+
+.form-switch input[type="checkbox"]:checked + label > span:first-child {
+    left: 22px !important;
+}
+
+.form-switch input[type="checkbox"]:disabled + label {
+    @apply cursor-not-allowed bg-slate-100 border border-slate-200 !important;
+}
+
+.form-switch input[type="checkbox"]:disabled + label > span:first-child {
+    @apply bg-slate-400 !important;
+}
